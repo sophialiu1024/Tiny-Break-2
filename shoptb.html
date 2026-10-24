@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop · tiny break</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@400;500;600;700&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="game-page shop-page">
+  <main class="game-wrap shop-wrap">
+    <header class="topbar"><a class="back" href="index.html">← back to menu</a><div class="points-pill">POINTS TO SPEND <b id="points">0</b></div></header>
+    <h1 class="game-title">Shop</h1>
+    <p class="game-subtitle">Use the points you have earned to give the site a new look or a helpful boost.</p>
+    <section class="shop-grid">
+      <article class="shop-card-panel">
+        <div class="shop-swatch pink-swatch"></div><h2>Pink theme</h2><p>Give every surface a rosy glow while keeping the text easy to read.</p>
+        <button class="new-game shop-action" id="pinkButton" type="button">Buy for 500 points</button>
+      </article>
+      <article class="shop-card-panel">
+        <div class="shop-swatch yellow-swatch"></div><h2>Yellow theme</h2><p>Warm every surface with a little more sunshine.</p>
+        <button class="new-game shop-action" id="yellowButton" type="button">Buy for 500 points</button>
+      </article>
+      <article class="shop-card-panel multiplier-panel">
+        <div class="shop-swatch multiplier-swatch">×2</div><h2>Point multiplier</h2><p>Double every game reward whenever you decide to switch it on.</p>
+        <button class="new-game shop-action" id="multiplierButton" type="button">Buy for 1000 points</button>
+        <button class="shop-toggle" id="toggleMultiplier" type="button" hidden>Turn multiplier off</button>
+      </article>
+    </section>
+    <p class="shop-status" id="shopStatus" aria-live="polite"></p>
+  </main>
+  <section class="hide-zone" aria-label="Blank screen"></section>
+  <script src="site.js?v=progress-2"></script>
+  <script src="shop.js?v=language-2"></script>
+</body>
+</html>

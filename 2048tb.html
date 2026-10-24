@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue 2048 · tiny break</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@400;500;600;700&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="game-page" data-game="2048">
+  <main class="game-wrap">
+    <header class="topbar"><a class="back" href="index.html">← back to menu</a><button class="new-game" id="newGame" type="button">start over</button></header>
+    <h1 class="game-title">Blue 2048</h1>
+    <p class="game-subtitle">Slide the tiles with the arrow keys and let matching numbers become something bigger.</p>
+    <p class="reward-info">You can earn 50 points for 512, 100 for 1024, 200 for 2048, and 300 for every 4096 or higher.</p>
+    <div class="score-row"><div class="score">SCORE<b id="score">0</b></div><div class="score">BEST<b id="best">0</b></div><div class="score">GAME POINTS<b id="gamePoints">0</b></div></div>
+    <section class="game-panel">
+      <div class="board-2048" id="board" aria-label="2048 game board"></div>
+      <p class="game-message" id="message" aria-live="polite"></p>
+    </section>
+    <section class="result-screen" id="winScreen" hidden aria-live="assertive">
+      <p class="result-kicker">milestone reached</p>
+      <h2>You made 2048!</h2>
+      <p>Keep playing if you want to chase an even bigger score.</p>
+      <button class="new-game" id="continueGame" type="button">Keep playing</button>
+    </section>
+    <section class="result-screen" id="gameOverScreen" hidden aria-live="assertive">
+      <p class="result-kicker">no moves remain</p>
+      <h2>Game over</h2>
+      <p>The board is full, and there are no neighboring tiles left to combine.</p>
+      <button class="new-game" id="retryGame" type="button">Try again</button>
+    </section>
+    <p class="hide-hint">Need to look busy? Scroll down.</p>
+  </main>
+  <section class="hide-zone" aria-label="Blank screen"></section>
+  <script src="site.js?v=progress-2"></script>
+  <script src="game2048.js?v=directional-merge-6"></script>
+</body>
+</html>

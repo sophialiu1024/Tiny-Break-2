@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Block Bloom · tiny break</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@400;500;600;700&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="game-page" data-game="blocks">
+  <main class="game-wrap">
+    <header class="topbar"><a class="back" href="index.html">← back to menu</a><button class="new-game" id="newGame" type="button">start over</button></header>
+    <h1 class="game-title">Block Bloom</h1>
+    <p class="game-subtitle">Drag a shape onto the board and make room by clearing complete lines.</p>
+    <p class="reward-info">You can earn 20 points for every complete row or column you clear.</p>
+    <div class="score-row"><div class="score">SCORE<b id="score">0</b></div><div class="score">BEST<b id="best">0</b></div><div class="score">GAME POINTS<b id="gamePoints">0</b></div></div>
+    <section class="game-panel block-layout">
+      <div class="block-board" id="blockBoard" aria-label="Block game board"></div>
+      <div class="piece-rack" id="pieceRack" aria-label="Available block shapes"></div>
+      <p class="block-note" id="blockNote" aria-live="polite">Clear full rows or columns for a little sparkle.</p>
+    </section>
+    <section class="lose-screen" id="loseScreen" hidden aria-live="assertive">
+      <p class="lose-kicker">the board is full</p>
+      <h2>You lose</h2>
+      <p>There is no room for another shape. Would you like to give it another bloom?</p>
+      <button class="new-game" id="tryAgain" type="button">Try again</button>
+    </section>
+    <p class="hide-hint">Need to look busy? Scroll down.</p>
+  </main>
+  <section class="hide-zone" aria-label="Blank screen"></section>
+  <script src="site.js?v=progress-2"></script>
+  <script src="blocks.js?v=bloom-rewards-5"></script>
+</body>
+</html>
